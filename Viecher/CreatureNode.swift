@@ -25,31 +25,31 @@ class CreatureNode : SKNode {
         name = "creature"
     }
     
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     func draw() {
         let body = SKShapeNode(circleOfRadius: 20)
         body.position = CGPoint(x: position.x, y: position.y)
         body.strokeColor = SKColor.black
         
         
-        let feeler = SKShapeNode()
+        let frontIndicator = SKShapeNode()
         
-        let feelerLine = CGMutablePath()
-        feelerLine.move(to: CGPoint(x: position.x, y: position.y))
-        feelerLine.addLine(to: CGPoint(x: position.x + 10, y: position.y + 10))
+        let frontIndicatorPath = CGMutablePath()
+        frontIndicatorPath.move(to: CGPoint(x: position.x, y: position.y))
+        frontIndicatorPath.addLine(to: CGPoint(x: position.x + 50, y: position.y + 50))
         
-        feeler.path = feelerLine
-        feeler.strokeColor = SKColor.black
+        frontIndicator.path = frontIndicatorPath
+        frontIndicator.strokeColor = SKColor.black
         
         
         addChild(body)
-        addChild(feeler)
+        addChild(frontIndicator)
     }
     
     func move() {
         position = CGPoint(x: position.x + 1, y: position.y)
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
 }
