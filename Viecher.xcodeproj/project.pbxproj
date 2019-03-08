@@ -16,6 +16,7 @@
 		43DBE5A72231594A008C90ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43DBE5A52231594A008C90ED /* Main.storyboard */; };
 		43DBE5B32231594A008C90ED /* ViecherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DBE5B22231594A008C90ED /* ViecherTests.swift */; };
 		43DBE5BE2231594B008C90ED /* ViecherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DBE5BD2231594B008C90ED /* ViecherUITests.swift */; };
+		43DBE5CC22323F2D008C90ED /* Creature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DBE5CB22323F2D008C90ED /* Creature.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		43DBE5B92231594A008C90ED /* ViecherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ViecherUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		43DBE5BD2231594B008C90ED /* ViecherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViecherUITests.swift; sourceTree = "<group>"; };
 		43DBE5BF2231594B008C90ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		43DBE5CB22323F2D008C90ED /* Creature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Creature.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				43DBE5A52231594A008C90ED /* Main.storyboard */,
 				43DBE5A82231594A008C90ED /* Info.plist */,
 				43DBE5A92231594A008C90ED /* Viecher.entitlements */,
+				43DBE5CB22323F2D008C90ED /* Creature.swift */,
 			);
 			path = Viecher;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43DBE5CC22323F2D008C90ED /* Creature.swift in Sources */,
 				43DBE5A222315948008C90ED /* ViewController.swift in Sources */,
 				43DBE5A022315948008C90ED /* GameScene.swift in Sources */,
 				43DBE59A22315948008C90ED /* AppDelegate.swift in Sources */,
