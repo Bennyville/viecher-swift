@@ -16,6 +16,8 @@ class GameScene: SKScene {
     private var creature : CreatureNode?
     
     override func didMove(to view: SKView) {
+        backgroundColor = SKColor.white
+        
         var i = 0;
         
         while i < 1 {
