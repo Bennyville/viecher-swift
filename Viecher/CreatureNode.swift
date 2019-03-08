@@ -38,8 +38,8 @@ class CreatureNode : SKNode {
         
         let rotationinRadians = Helper.deg2rad(self.rotation)
         
-        let lineRotationX = 0 * sin(rotationinRadians) + 50 * cos(rotationinRadians) + position.x
-        let lineRotationY = 0 * cos(rotationinRadians) - 50 * sin(rotationinRadians) + position.y
+        let lineRotationX = 0 * sin(rotationinRadians) + 20 * cos(rotationinRadians) + position.x
+        let lineRotationY = 0 * cos(rotationinRadians) - 20 * sin(rotationinRadians) + position.y
 
         
         let frontIndicator = SKShapeNode()
@@ -49,7 +49,7 @@ class CreatureNode : SKNode {
         frontIndicatorPath.addLine(to: CGPoint(x: position.x + lineRotationX, y: position.y + lineRotationY))
         
         frontIndicator.path = frontIndicatorPath
-        frontIndicator.strokeColor = SKColor.black
+        frontIndicator.strokeColor = SKColor.white
         
         
         addChild(body)
