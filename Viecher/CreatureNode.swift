@@ -35,11 +35,12 @@ class CreatureNode : SKNode {
         body.lineWidth = 0
         body.fillColor = SKColor.black
         
+        
         let rotationinRadians = Helper.deg2rad(self.rotation)
         
         let lineRotationX = 0 * sin(rotationinRadians) + 50 * cos(rotationinRadians) + position.x
         let lineRotationY = 0 * cos(rotationinRadians) - 50 * sin(rotationinRadians) + position.y
-        
+
         
         let frontIndicator = SKShapeNode()
         
