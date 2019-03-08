@@ -19,10 +19,10 @@ class GameScene: SKScene {
         var i = 0;
         
         while i < 1 {
-            let randomX = 50
-            let randomY = Int.random(in: -100 ..< 100)
+            let randomX = 0
+            let randomY = 0
             
-            creature = CreatureNode(x: randomX, y: randomY, rotation: 0)
+            creature = CreatureNode(x: randomX, y: randomY, rotation: 180)
             
             creature?.draw()
             

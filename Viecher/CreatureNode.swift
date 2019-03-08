@@ -12,9 +12,9 @@ import SpriteKit
 class CreatureNode : SKNode {
     var x : Int
     var y : Int
-    var rotation : Int
+    var rotation : CGFloat
     
-    init(x : Int, y : Int, rotation : Int) {
+    init(x : Int, y : Int, rotation : CGFloat) {
         self.x = x
         self.y = y
         self.rotation = rotation
@@ -32,14 +32,20 @@ class CreatureNode : SKNode {
     func draw() {
         let body = SKShapeNode(circleOfRadius: 20)
         body.position = CGPoint(x: position.x, y: position.y)
-        body.strokeColor = SKColor.black
+        body.lineWidth = 0
+        body.fillColor = SKColor.black
+        
+        let rotationinRadians = Helper.deg2rad(self.rotation)
+        
+        let lineRotationX = 0 * sin(rotationinRadians) + 50 * cos(rotationinRadians) + position.x
+        let lineRotationY = 0 * cos(rotationinRadians) - 50 * sin(rotationinRadians) + position.y
         
         
         let frontIndicator = SKShapeNode()
         
         let frontIndicatorPath = CGMutablePath()
         frontIndicatorPath.move(to: CGPoint(x: position.x, y: position.y))
-        frontIndicatorPath.addLine(to: CGPoint(x: position.x + 50, y: position.y + 50))
+        frontIndicatorPath.addLine(to: CGPoint(x: position.x + lineRotationX, y: position.y + lineRotationY))
         
         frontIndicator.path = frontIndicatorPath
         frontIndicator.strokeColor = SKColor.black

@@ -9,7 +9,7 @@
 import Foundation
 
 class Helper {
-    static func deg2rad(_ number: Double) -> Double {
+    static func deg2rad(_ number: CGFloat) -> CGFloat {
         return number * .pi / 180
     }
 }
