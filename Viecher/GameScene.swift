@@ -24,8 +24,7 @@ class GameScene: SKScene {
             
             creature = CreatureNode(x: randomX, y: randomY)
             
-            creature?.drawBody()
-            creature?.drawFeeler()
+            creature?.draw()
             
             addChild(creature!)
             

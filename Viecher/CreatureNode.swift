@@ -12,10 +12,12 @@ import SpriteKit
 class CreatureNode : SKNode {
     var x : Int
     var y : Int
+    var rotation : Int
     
-    init(x : Int, y : Int) {
+    init(x : Int, y : Int, rotation : Int) {
         self.x = x
         self.y = y
+        self.rotation = rotation
         
         super.init()
         
@@ -23,15 +25,12 @@ class CreatureNode : SKNode {
         name = "creature"
     }
     
-    func drawBody() {
+    func draw() {
         let body = SKShapeNode(circleOfRadius: 20)
         body.position = CGPoint(x: position.x, y: position.y)
         body.strokeColor = SKColor.black
         
-        addChild(body)
-    }
-    
-    func drawFeeler() {
+        
         let feeler = SKShapeNode()
         
         let feelerLine = CGMutablePath()
@@ -41,6 +40,8 @@ class CreatureNode : SKNode {
         feeler.path = feelerLine
         feeler.strokeColor = SKColor.black
         
+        
+        addChild(body)
         addChild(feeler)
     }
     
