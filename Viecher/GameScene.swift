@@ -15,10 +15,6 @@ class GameScene: SKScene {
     private var spinnyNode : SKShapeNode?
     private var creature : CreatureNode?
     
-    func deg2rad(_ number: Double) -> Double {
-        return number * .pi / 180
-    }
-    
     override func didMove(to view: SKView) {
         var i = 0;
         
