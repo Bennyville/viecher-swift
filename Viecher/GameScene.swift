@@ -18,11 +18,11 @@ class GameScene: SKScene {
     override func didMove(to view: SKView) {
         var i = 0;
         
-        while i < 800 {
-            let randomX = Int.random(in: -500 ..< -300)
+        while i < 1 {
+            let randomX = 50
             let randomY = Int.random(in: -100 ..< 100)
             
-            creature = CreatureNode(x: randomX, y: randomY)
+            creature = CreatureNode(x: randomX, y: randomY, rotation: 0)
             
             creature?.draw()
             
@@ -53,10 +53,10 @@ class GameScene: SKScene {
     }
     
     override func update(_ currentTime: TimeInterval) {
-        enumerateChildNodes(withName: "creature") {
-            node, _ in
-            let creature = node as! CreatureNode
-            creature.move()
-        }
+//        enumerateChildNodes(withName: "creature") {
+//            node, _ in
+//            let creature = node as! CreatureNode
+//            creature.move()
+//        }
     }
 }
