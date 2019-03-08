@@ -17,8 +17,9 @@
 		43DBE5B32231594A008C90ED /* ViecherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DBE5B22231594A008C90ED /* ViecherTests.swift */; };
 		43DBE5BE2231594B008C90ED /* ViecherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DBE5BD2231594B008C90ED /* ViecherUITests.swift */; };
 		43DBE5CC22323F2D008C90ED /* CreatureNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DBE5CB22323F2D008C90ED /* CreatureNode.swift */; };
-		43DBE5CE22325E2D008C90ED /* TileMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DBE5CD22325E2D008C90ED /* TileMap.swift */; };
+		43DBE5CE22325E2D008C90ED /* WorldNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DBE5CD22325E2D008C90ED /* WorldNode.swift */; };
 		43DBE5D0223260E7008C90ED /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DBE5CF223260E7008C90ED /* Helper.swift */; };
+		43DBE5D222327ACC008C90ED /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DBE5D122327ACC008C90ED /* Tile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,8 +57,9 @@
 		43DBE5BD2231594B008C90ED /* ViecherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViecherUITests.swift; sourceTree = "<group>"; };
 		43DBE5BF2231594B008C90ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43DBE5CB22323F2D008C90ED /* CreatureNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatureNode.swift; sourceTree = "<group>"; };
-		43DBE5CD22325E2D008C90ED /* TileMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileMap.swift; sourceTree = "<group>"; };
+		43DBE5CD22325E2D008C90ED /* WorldNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldNode.swift; sourceTree = "<group>"; };
 		43DBE5CF223260E7008C90ED /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		43DBE5D122327ACC008C90ED /* Tile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,8 +120,9 @@
 				43DBE5A82231594A008C90ED /* Info.plist */,
 				43DBE5A92231594A008C90ED /* Viecher.entitlements */,
 				43DBE5CB22323F2D008C90ED /* CreatureNode.swift */,
-				43DBE5CD22325E2D008C90ED /* TileMap.swift */,
+				43DBE5CD22325E2D008C90ED /* WorldNode.swift */,
 				43DBE5CF223260E7008C90ED /* Helper.swift */,
+				43DBE5D122327ACC008C90ED /* Tile.swift */,
 			);
 			path = Viecher;
 			sourceTree = "<group>";
@@ -274,9 +277,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				43DBE5CE22325E2D008C90ED /* TileMap.swift in Sources */,
+				43DBE5CE22325E2D008C90ED /* WorldNode.swift in Sources */,
 				43DBE5CC22323F2D008C90ED /* CreatureNode.swift in Sources */,
 				43DBE5A222315948008C90ED /* ViewController.swift in Sources */,
+				43DBE5D222327ACC008C90ED /* Tile.swift in Sources */,
 				43DBE5A022315948008C90ED /* GameScene.swift in Sources */,
 				43DBE59A22315948008C90ED /* AppDelegate.swift in Sources */,
 				43DBE5D0223260E7008C90ED /* Helper.swift in Sources */,

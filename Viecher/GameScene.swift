@@ -10,13 +10,38 @@ import SpriteKit
 import GameplayKit
 
 class GameScene: SKScene {
-    
-    private var label : SKLabelNode?
-    private var spinnyNode : SKShapeNode?
     private var creature : CreatureNode?
+    private var worldNode : WorldNode?
+    private var world : [[Int]] = []
     
     override func didMove(to view: SKView) {
         backgroundColor = SKColor.white
+        
+        world = [
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
+            [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
+            [0, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 0],
+            [0, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0],
+            [0, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0],
+            [0, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 0],
+            [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        ];
+        
+        worldNode = WorldNode(world: world, tileSize: 100)
+        worldNode?.position = CGPoint(x:-700,y:-700)
+        worldNode?.generate()
+        worldNode?.draw()
+            
+        addChild(worldNode!)
         
         var i = 0;
         
@@ -24,7 +49,7 @@ class GameScene: SKScene {
             let randomX = 0
             let randomY = 0
             
-            creature = CreatureNode(x: randomX, y: randomY, rotation: 180)
+            creature = CreatureNode(x: randomX, y: randomY, rotation: 45)
             
             creature?.draw()
             
@@ -55,10 +80,10 @@ class GameScene: SKScene {
     }
     
     override func update(_ currentTime: TimeInterval) {
-//        enumerateChildNodes(withName: "creature") {
-//            node, _ in
-//            let creature = node as! CreatureNode
-//            creature.move()
-//        }
+        enumerateChildNodes(withName: "creature") {
+            node, _ in
+            let creature = node as! CreatureNode
+            creature.move()
+        }
     }
 }

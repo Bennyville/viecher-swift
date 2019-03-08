@@ -57,6 +57,11 @@ class CreatureNode : SKNode {
     }
     
     func move() {
-        position = CGPoint(x: position.x + 1, y: position.y)
+        let rotationinRadians = Helper.deg2rad(self.rotation)
+        
+        let velocityX = 0 * sin(rotationinRadians) + 1 * cos(rotationinRadians)
+        let velocityY = 0 * cos(rotationinRadians) - 1 * sin(rotationinRadians)
+        
+        position = CGPoint(x: position.x + velocityX, y: position.y + velocityY)
     }
 }
