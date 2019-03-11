@@ -30,10 +30,10 @@ class WorldNode : SKNode {
     
     func generate() {
         var x = 0
-        while x < self.world.count - 1 {
+        while x < self.world.count {
             self.tiles.append([])
             var y = 0
-            while y < self.world[0].count - 1 {
+            while y < self.world[0].count {
                 self.tiles[x].append([])
                 switch(self.world[x][y]) {
                 case 0:
@@ -56,11 +56,12 @@ class WorldNode : SKNode {
     }
     
     func draw() {
+        
         print("\n")
         var x = 0
         while x < self.tiles.count - 1 {
             var y = 0
-            while y < self.tiles[0].count - 1 {
+            while y < self.tiles[0].count {
                 let child = self.tiles[x][y] as! Tile
                 addChild(child.draw(tileSize: self.tileSize))
                 
