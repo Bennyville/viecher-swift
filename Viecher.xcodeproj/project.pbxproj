@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		438C8F902236F6A9002D85FE /* libtensorflow_framework.so in Frameworks */ = {isa = PBXBuildFile; fileRef = 438C8F8F2236F6A9002D85FE /* libtensorflow_framework.so */; };
+		438C8F922236F6B2002D85FE /* libtensorflow.so in Frameworks */ = {isa = PBXBuildFile; fileRef = 438C8F912236F6B2002D85FE /* libtensorflow.so */; };
+		438C8F9522370893002D85FE /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438C8F9422370893002D85FE /* Network.swift */; };
+		438C8F97223708A2002D85FE /* Neuron.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438C8F96223708A2002D85FE /* Neuron.swift */; };
+		438C8F99223708AE002D85FE /* Layer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438C8F98223708AE002D85FE /* Layer.swift */; };
+		438C8F9B223708C5002D85FE /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438C8F9A223708C5002D85FE /* Connection.swift */; };
 		43DBE59A22315948008C90ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DBE59922315948008C90ED /* AppDelegate.swift */; };
 		43DBE59C22315948008C90ED /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 43DBE59B22315948008C90ED /* GameScene.sks */; };
 		43DBE59E22315948008C90ED /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 43DBE59D22315948008C90ED /* Actions.sks */; };
@@ -40,6 +46,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		438C8F8D2236F5A8002D85FE /* swift-tensorflow-RELEASE-0.2.xctoolchain */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "swift-tensorflow-RELEASE-0.2.xctoolchain"; path = "../../../../Library/Developer/Toolchains/swift-tensorflow-RELEASE-0.2.xctoolchain"; sourceTree = "<group>"; };
+		438C8F8F2236F6A9002D85FE /* libtensorflow_framework.so */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libtensorflow_framework.so; path = ../../Desktop/libtensorflow_framework.so; sourceTree = "<group>"; };
+		438C8F912236F6B2002D85FE /* libtensorflow.so */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libtensorflow.so; path = ../../Desktop/libtensorflow.so; sourceTree = "<group>"; };
+		438C8F9422370893002D85FE /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		438C8F96223708A2002D85FE /* Neuron.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Neuron.swift; sourceTree = "<group>"; };
+		438C8F98223708AE002D85FE /* Layer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layer.swift; sourceTree = "<group>"; };
+		438C8F9A223708C5002D85FE /* Connection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
 		43DBE59622315948008C90ED /* Viecher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Viecher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43DBE59922315948008C90ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43DBE59B22315948008C90ED /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -67,6 +80,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				438C8F922236F6B2002D85FE /* libtensorflow.so in Frameworks */,
+				438C8F902236F6A9002D85FE /* libtensorflow_framework.so in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +102,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		438C8F8C2236F5A8002D85FE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				438C8F912236F6B2002D85FE /* libtensorflow.so */,
+				438C8F8F2236F6A9002D85FE /* libtensorflow_framework.so */,
+				438C8F8D2236F5A8002D85FE /* swift-tensorflow-RELEASE-0.2.xctoolchain */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		438C8F932237087A002D85FE /* AI */ = {
+			isa = PBXGroup;
+			children = (
+				438C8F9422370893002D85FE /* Network.swift */,
+				438C8F96223708A2002D85FE /* Neuron.swift */,
+				438C8F98223708AE002D85FE /* Layer.swift */,
+				438C8F9A223708C5002D85FE /* Connection.swift */,
+			);
+			path = AI;
+			sourceTree = "<group>";
+		};
 		43DBE58D22315948008C90ED = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +130,7 @@
 				43DBE5B12231594A008C90ED /* ViecherTests */,
 				43DBE5BC2231594A008C90ED /* ViecherUITests */,
 				43DBE59722315948008C90ED /* Products */,
+				438C8F8C2236F5A8002D85FE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,6 +147,7 @@
 		43DBE59822315948008C90ED /* Viecher */ = {
 			isa = PBXGroup;
 			children = (
+				438C8F932237087A002D85FE /* AI */,
 				43DBE59922315948008C90ED /* AppDelegate.swift */,
 				43DBE59B22315948008C90ED /* GameScene.sks */,
 				43DBE59D22315948008C90ED /* Actions.sks */,
@@ -278,10 +316,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				43DBE5CE22325E2D008C90ED /* WorldNode.swift in Sources */,
+				438C8F9B223708C5002D85FE /* Connection.swift in Sources */,
 				43DBE5CC22323F2D008C90ED /* CreatureNode.swift in Sources */,
+				438C8F9522370893002D85FE /* Network.swift in Sources */,
 				43DBE5A222315948008C90ED /* ViewController.swift in Sources */,
+				438C8F97223708A2002D85FE /* Neuron.swift in Sources */,
 				43DBE5D222327ACC008C90ED /* Tile.swift in Sources */,
 				43DBE5A022315948008C90ED /* GameScene.swift in Sources */,
+				438C8F99223708AE002D85FE /* Layer.swift in Sources */,
 				43DBE59A22315948008C90ED /* AppDelegate.swift in Sources */,
 				43DBE5D0223260E7008C90ED /* Helper.swift in Sources */,
 			);
@@ -457,8 +499,10 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = Benny.Viecher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
@@ -475,8 +519,10 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = Benny.Viecher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
