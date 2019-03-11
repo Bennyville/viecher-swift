@@ -56,8 +56,6 @@ class WorldNode : SKNode {
     }
     
     func draw() {
-        
-        print("\n")
         var x = 0
         while x < self.tiles.count - 1 {
             var y = 0
