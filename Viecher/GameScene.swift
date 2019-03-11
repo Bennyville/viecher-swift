@@ -37,7 +37,7 @@ class GameScene: SKScene {
         ];
         
         worldNode = WorldNode(world: world, tileSize: 100)
-        worldNode?.position = CGPoint(x:-700,y:-700)
+        worldNode?.position = CGPoint(x:-750,y:-750)
         worldNode?.generate()
         worldNode?.draw()
             
