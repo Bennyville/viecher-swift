@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		438C8F902236F6A9002D85FE /* libtensorflow_framework.so in Frameworks */ = {isa = PBXBuildFile; fileRef = 438C8F8F2236F6A9002D85FE /* libtensorflow_framework.so */; };
-		438C8F922236F6B2002D85FE /* libtensorflow.so in Frameworks */ = {isa = PBXBuildFile; fileRef = 438C8F912236F6B2002D85FE /* libtensorflow.so */; };
 		438C8F9522370893002D85FE /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438C8F9422370893002D85FE /* Network.swift */; };
 		438C8F97223708A2002D85FE /* Neuron.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438C8F96223708A2002D85FE /* Neuron.swift */; };
 		438C8F99223708AE002D85FE /* Layer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438C8F98223708AE002D85FE /* Layer.swift */; };
@@ -80,8 +78,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				438C8F922236F6B2002D85FE /* libtensorflow.so in Frameworks */,
-				438C8F902236F6A9002D85FE /* libtensorflow_framework.so in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,7 +108,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		438C8F932237087A002D85FE /* AI */ = {
+		438C8F932237087A002D85FE /* NeuralNetwork */ = {
 			isa = PBXGroup;
 			children = (
 				438C8F9422370893002D85FE /* Network.swift */,
@@ -120,7 +116,7 @@
 				438C8F98223708AE002D85FE /* Layer.swift */,
 				438C8F9A223708C5002D85FE /* Connection.swift */,
 			);
-			path = AI;
+			path = NeuralNetwork;
 			sourceTree = "<group>";
 		};
 		43DBE58D22315948008C90ED = {
@@ -147,7 +143,7 @@
 		43DBE59822315948008C90ED /* Viecher */ = {
 			isa = PBXGroup;
 			children = (
-				438C8F932237087A002D85FE /* AI */,
+				438C8F932237087A002D85FE /* NeuralNetwork */,
 				43DBE59922315948008C90ED /* AppDelegate.swift */,
 				43DBE59B22315948008C90ED /* GameScene.sks */,
 				43DBE59D22315948008C90ED /* Actions.sks */,

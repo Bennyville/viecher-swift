@@ -13,6 +13,7 @@ class CreatureNode : SKNode {
     var x : Int
     var y : Int
     var rotation : CGFloat
+    private var brain : Network?
     
     init(x : Int, y : Int, rotation : CGFloat) {
         self.x = x
@@ -27,6 +28,57 @@ class CreatureNode : SKNode {
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    func initBrain() {
+        let inputPositionFoodValue : Neuron = Neuron(name: "inPositionFoodValue")
+        let inputFeelerFoodValue   : Neuron = Neuron(name: "inFeelerFoodValue")
+        let inputPositionOnWater   : Neuron = Neuron(name: "inPositionOnWater")
+        let inputFeelerOnWater     : Neuron = Neuron(name: "inFeelerOnWater")
+        let inputAge               : Neuron = Neuron(name: "inAge")
+        let inputEnergy            : Neuron = Neuron(name: "inEnergy")
+        
+        let inputLayer : Layer = Layer()
+        inputLayer.addNeuron(neuron: inputPositionFoodValue)
+        inputLayer.addNeuron(neuron: inputFeelerFoodValue)
+        inputLayer.addNeuron(neuron: inputPositionOnWater)
+        inputLayer.addNeuron(neuron: inputFeelerOnWater)
+        inputLayer.addNeuron(neuron: inputAge)
+        inputLayer.addNeuron(neuron: inputEnergy)
+        
+        
+        let hiddenLayer = Layer(neuronAmount: 10)
+        
+        
+        let outMove         : Neuron = Neuron(name: "outMove")
+        let outRotate       : Neuron = Neuron(name: "outRotate")
+        let outEat          : Neuron = Neuron(name: "outEat")
+        let outBirth        : Neuron = Neuron(name: "outBirth")
+        let outRotateFeeler : Neuron = Neuron(name: "outRotateFeeler")
+        
+        let outputLayer : Layer = Layer()
+        outputLayer.addNeuron(neuron: outMove)
+        outputLayer.addNeuron(neuron: outRotate)
+        outputLayer.addNeuron(neuron: outEat)
+        outputLayer.addNeuron(neuron: outBirth)
+        outputLayer.addNeuron(neuron: outRotateFeeler)
+        
+        
+        self.brain = Network()
+        self.brain!.addLayer(layer: inputLayer)
+        self.brain!.addLayer(layer: hiddenLayer)
+        self.brain!.addLayer(layer: outputLayer)
+        
+        self.brain!.generateFullMesh()
+        
+        inputPositionFoodValue.setValue(value: -1)
+        inputFeelerFoodValue.setValue(value: -1)
+        inputPositionOnWater.setValue(value: -1)
+        inputFeelerOnWater.setValue(value: -1)
+        inputAge.setValue(value: -1)
+        inputEnergy.setValue(value: -1)
+        
+        print(outMove.getValue())
     }
     
     func draw() {

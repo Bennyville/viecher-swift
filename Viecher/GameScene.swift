@@ -51,6 +51,8 @@ class GameScene: SKScene {
             
             creature = CreatureNode(x: randomX, y: randomY, rotation: 45)
             
+            creature!.initBrain()
+            
             creature?.draw()
             
             addChild(creature!)
